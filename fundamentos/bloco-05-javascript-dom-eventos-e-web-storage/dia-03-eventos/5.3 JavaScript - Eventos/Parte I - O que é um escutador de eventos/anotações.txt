@@ -1,0 +1,55 @@
+Eventos em JavaScript
+
+- Permite nossa página ser dinâmica
+- Pode ser disparado por uma ação visível da pessoa usuária ou pelo próprio navegador
+
+Manipulação de eventos disparados pelo DOM
+
+DOM on-event handlers
+#---------------------- Exemplo ------------------------
+#  <body>
+#    <p id="trybe">
+#      Olá, somos a trybe e temos uma oferta imperdível para você...
+#    </p>
+#
+#    <button onclick="maisInfos()">Mais informações</button>
+#
+#    <p id="trybe-continua"></p>
+#    <script>
+#      window.onload = jsCarregado
+#      function jsCarregado () {
+#        alert("Página foi carregada!")
+#      }
+#    </script>
+#  </body>
+#----------------- Fim Do Exemplo ----------------------
+
+Manipulações de eventos declarados na linha do HTML
+
+Inline event handlers
+#---------------------- Exemplo ------------------------
+#  <body>
+#    <p id="trybe">
+#      Olá, somos a trybe e temos uma oferta imperdível para você...
+#    </p>
+#
+#    <button onclick="maisInfos()">Mais informações</button>
+#
+#    <p id="trybe-continua"></p>
+#    <script>
+#
+#      window.onload = pizzaPronta
+#      alert("pedido da pizza")
+#
+#      function pizzaPronta() {
+#        alert("Tocou a campainha")
+#        alert("Recebi a pizza")
+#      }
+#      function maisInfos() {
+#        let textMaisInfos = document.getElementById("trybe-continua");
+#        textMaisInfos.innerText = "Aqui você vai aprender Hard Skills, Soft Skills e várias outras habilidades!";
+#        textMaisInfos.style.color = "red";
+#      }
+#    </script>
+#  </body>
+#----------------- Fim Do Exemplo ----------------------
