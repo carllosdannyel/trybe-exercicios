@@ -1,0 +1,34 @@
+.flex-container {
+  border: 2px solid black;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  flex: row;
+  justify-content: center;
+  /* height: 400px; */
+}
+
+.box {
+  background-color: green;
+  border: 2px solid black;
+  padding: 0 10px;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.sub-container {
+  /* flex-flow: column; */
+  flex-flow: row;
+  height: 400px;
+
+}
+
+.sub-box {
+  background-color: white;
+  padding: 45px;
+  margin: 2px;
+  align-self: center;
+  /* align-self: stretch; */
+  /* align-self: flex-end; */
+  /* align-self: flex-start; */
+}
