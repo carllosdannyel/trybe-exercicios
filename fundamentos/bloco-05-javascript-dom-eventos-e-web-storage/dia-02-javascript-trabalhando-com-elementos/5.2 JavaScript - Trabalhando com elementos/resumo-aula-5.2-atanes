@@ -1,0 +1,15 @@
+5.2 - JavaScript - Trabalhando com elementos
+
+Dica: Sempre utilizar o classList pra manipular as classes das tags, tanto pra adicionar "classList.add('nomeDaClass')" quanto para remover "classList.remove('nomeDaClasse')" como forma de flexibilização, será muito útil para os próximos projetos;
+
+Existem duas formas de remover um elemento, a primeira é que se eu conheço o elemento ou seja, se eu tenho uma variável atribuida a ele posso utilizar a função "remove()"; já na segunda opção, eu posso remover através do pai desse elemento utilizando a função "removeChild(filho)";
+
+*** obs: utilizar o "remove()" pra remover os nodes; ***
+
+Se queremos pegar todos os elementos filhos utilizamos o chidren,
+agora se queremos pegar tantos os nós quanto os elementos utilizamos o childNode/childrenNode;
+
+todo elemento é um nó, mas nem todo nó precisa ser um elemento;
+
+para se usar uma função do tipo node ou seja, um elemento que não necessariamente precisa ser do tipo html (<p></p> por exemplo(tags propriamente ditas)) dentro de outra função atribuindo um parametro de criação de tags, deve-se criar a função da criação (createElement) retornar  variável criar com o propósito único que é somente de criar um elemento/nó, recebendo no seu parâmetro as alterações das suas classes (classList).
+
