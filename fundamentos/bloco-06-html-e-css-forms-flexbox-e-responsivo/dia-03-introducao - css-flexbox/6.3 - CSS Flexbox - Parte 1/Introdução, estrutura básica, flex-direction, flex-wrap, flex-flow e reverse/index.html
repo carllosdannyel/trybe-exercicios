@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox - Flex Flow</title>
+  <style>
+    .box {
+      color: #185a4a;
+      background-color: rgb(38, 197, 189);
+      border: 2px solid #ff8b07;
+      font-size: 50px;
+      height: 60px;
+      margin: 10px 5px;
+      text-align: center;
+      width: 30%;
+    }
+
+    /* 1 - Teste as possibilidades - row , column , row-reverse e column-reverse - para a propriedade flex-direction .
+
+    2 - Teste as possibilidades - wrap e nowrap - para a propriedade flex-wrap .
+
+    3 - Teste as possibilidades para a propriedade flex-flow . */
+
+    .box-container {
+      background-color: #0fa36b;
+      display: flex;
+      /* MAIN AXIS EM LINHA-[PADÃO] - QUEBRA DE LINHA*/
+      /* flex-direction: row;
+      flex-wrap: wrap;
+      flex-flow: row wrap; */
+
+      /* MAIN AXIS EM COLUNA - QUEBRA DE LINHA */
+      /* flex-direction: column;
+      flex-wrap: wrap;
+      flex-flow: column wrap; */
+
+      /* MAIN AXIS EM LINHA-[PADRÃO] - SEM QUEBRA DE LINHA*/
+      /* flex-direction: row;
+      flex-wrap: nowrap;
+      flex-flow: row nowrap; */
+
+      /* MAIN AXIS EM COLUNA - SEM QUEBRA DE LINHA */
+      /* flex-direction: column;
+      flex-wrap: nowrap;
+      flex-flow: column nowrap; */
+
+      /* MAIN AXIS EM LINHA - REVERSO */
+      /* flex-direction: row-reverse;
+      flex-flow: row-reverse nowrap; */
+
+      /* MAIN AXIS EM COLUNA - REVERSO */
+      /* flex-direction: column-reverse;
+      flex-flow: column-reverse wrap; */
+
+      /* EU QUERO ASSIM - QUBRA DE LINHA EM LINHA */
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-flow: row wrap;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="box-container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+</body>
+
+</html>
