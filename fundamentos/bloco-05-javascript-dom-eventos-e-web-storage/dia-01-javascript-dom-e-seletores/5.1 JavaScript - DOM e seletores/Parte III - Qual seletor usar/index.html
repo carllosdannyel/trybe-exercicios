@@ -1,0 +1,57 @@
+<!-- O getElementById(id) funciona de maneira diferente do querySelector('#id') , mas o resultado é o mesmo. Como dito no vídeo, o primeiro tem uma performance melhor, mas o segundo é mais flexível.
+⚠️ Atenção! ⚠️
+Enquanto os getElementsByClassName('ClassName') e getElementsByTagName('TagName') retornam uma HTMLCollection, os querySelectorAll('.ClassName') e querySelectorAll('TagName') retornam uma NodeList. -->
+
+<!-- A resposta mais simples é que tanto NodeList quanto HTMLCollection são coleções de nós DOM. A diferença é que enquanto um NodeList pode conter qualquer tipo de nó, o HTMLCollection conterá apenas qualquer elemento de nó.
+
+Então, qual é a diferença entre um elemento de nó e um tipo de nó?
+
+Nós: no DOM, tudo é um nó e cada nó é um objeto. O nó de nome é usado como um termo genérico, para tudo.
+
+Elemento: é um tipo específico de nó. Pode ser um item de lista, um div, o corpo, a janela, o que for, mas é um tipo específico.
+
+Agora podemos ver qual é a diferença entre um nodeList e o que é um elemento node:
+
+No final, uma é geral e outra é listas específicas de nós. É importante saber simplesmente porque você deve saber o que está retornando e para problemas de JavaScript mais avançados, como velocidade, no caso de NodeLists estático vs NodeLists ao vivo. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body id="container">
+  <header id="header-container">
+    <h1>Administrador do Tempo da Trybe</h1>
+  </header>
+
+  <section class="emergency-tasks">
+    <div>
+      <h3 class="first-class">Urgente e Importante</h3>
+    </div>
+    <div>
+      <h3 class="first-class">Urgente e Não-Importante</h3>
+    </div>
+  </section>
+
+  <section class="no-emergency-tasks">
+    <div>
+      <h3 class="seconde-class">Não-Urgente e Importante</h3>
+    </div>
+    <div>
+      <h3 class="seconde-class">Não-Urgente e Não-Importante</h3>
+    </div>
+  </section>
+
+  <footer id="footer-container">
+    <div>&copy; Trybe</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

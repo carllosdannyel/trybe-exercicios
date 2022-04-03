@@ -1,0 +1,22 @@
+5.1 - JavaScript - DOM e seletores
+
+Resumo Aula 5.1 Prof Atanes 1h - 1h40
+
+Sempre dar preferências em pegar o elemento pelo getElement
+
+Motivo: enquanto pegamos o elemento pelo getElement, o js fará a varredura pela página HTML e assim que o encontrar o que está procurando, automaticamente para a execução da busca fazendo com que a performace do código seja mais fluida.
+
+O querySelector busca somente um elemento da pagina, se for um nodeList pegará o primeiro índice, ele só retorna o primeiro índice de um nodeList.
+
+Já o querySelectorAll fará a varredura por todo o HTML em buscar do seu elemento, fazendo com que o seletor varra toda a página fazendo com que diminua significamente ou insignificamente a perfomace do código visto que ele encontra os elementos e só para de procurar quando varrer toda a página.
+
+Porém com o querySelectorAll podemos buscar elementos filhos dentro do nosso parâmetro, como por exemplo: eu quero acessar todas as minhas "li" que é filha de "ol" que é filha de "section" que é filha de "main", posso ir acessando pegando do pai e indo de filho a filho da forma que eu quiser, seja por tag, classe ou id, sempre respeitando cada sintaxe que o CSS nos exige, ID por "#", class por "." e tag diretamente ja que ela ja faz parte de um elemento do proprio DOM. No Exemplo acima, podemos acessar as "li" da seguinte forma: querySelectorAll("main section ol li") - Nota - se imprimir-mos isso no console do browser teriamos uma nodeList com todos os elementos "li" dentro de um array, caso eu queira acessar somente um índice específico desse array, preciso obrigatoriamente dizer ao meu querySelectorAll qual índice quero acessar senão ele irá pegar todos :)
+
+Todas as propriedades e tags de um HTML estão debaixo de um nodeList, mas alguns elementos que a nodeList carrega não são HTML. Exemplo: a nodeList pega a quebra de linha, texto solto na página que não estão dentro de uma tag HTML, ele pega uma estrutura maior, pega mais informações.
+
+htmlCollections: só tem elementos html dentro do array.
+nodeList: todos os elementos HTML mais algumas informações que não estão visíveis na nossa página.
+
+Se atribuirmos um estilo via ID, ele irá ganhar de qualquer um, pois ele tem a prioridade máxima, por exemplo, modifiquei a cor de fundo de elemento específico no CSS pelo ID, e ao tentar alterar pelo js a propriedade de cor de fundo não irá funcionar, oq falta testar:
+
+* Tentar acessar o mesmo elemento pelo ID utilizando o js e sobrepor a propriedade de cor de fundo; duas coisas podem acontecer, ou ele não aplicará o que foi pedido pq o CSS ja determinou pelo ID a sua cor de fundo, ou ele aplicará a cor de fundo, respeitando tanto a prioridade quanto o efeito "cascada";
