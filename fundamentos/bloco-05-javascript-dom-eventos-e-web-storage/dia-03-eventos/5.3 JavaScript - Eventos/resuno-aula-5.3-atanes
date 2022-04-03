@@ -1,0 +1,17 @@
+5.3 - JavaScript - Eventos
+
+window.onload = funcao; || window.onload = function () {};
+
+O window.onload somente executará quaisquer função passada para ela mediante ao carregamento completo da página, possibilitando assim descobrirmos quando de fato a nossa página está totalmente carregada.
+
+Para adicionar algum evento em nosso arquivo js, é necessário buscar o elemento que receberá o parâmetro que vai ser executado após a realização de alguma função passada para ele, por exemplo, se quisermos fazer com que alguma ação seja executada toda vez que clicarmos em cima de um botão, fazemos da seguinte forma:
+
+let btn = document.getElementById("btn");
+btn.addEventListener("acao=>click", funcaoASerExecutada);
+
+=> Formas de atribuição de funcitons <=
+
+let nomeDaVariavel = Function () {codigo a ser executado} => atribuindo uma função a uma variável específica;
+window.onload = function () {codigo a ser executado} => recebe uma função anônima;
+wundow.onload = nomeDaVariavelQueRecebeUmaFuncao => atribuição de função pelo nome da variável;
+
