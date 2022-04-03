@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulário</title>
+</head>
+
+<body>
+  <header>Formulário</header>
+  <div class="div-container">
+    <form action="">
+      <div>
+        <label for="input-text">Nome:</label>
+        <input type="text" id="input-text" minlength="10" maxlength="40">
+      </div>
+      <br>
+      <div>
+        <label for="input-email">Email:</label>
+        <input type="text" id="input-email" minlength="10" maxlength="50">
+      </div>
+      <br>
+      <label for="opcao1">
+        <input type="radio" name="opcoes" id="opcao1"> Cidade
+      </label>
+      <label for="opcao2">
+        <input type="radio" name="opcoes" id="opcao2"> Campo
+      </label>
+      <label for="opcao3">
+        <input type="radio" name="opcoes" id="opcao3"> Praia
+      </label>
+      <label for="opcao4">
+        <input type="radio" name="opcoes" id="opcao4"> Montanhas
+      </label>
+      <br><br>
+      <label for="textarea" style="font-size: 18px;">Por que você deveria ser a pessoa desenvolvedora a ganhar o
+        concurso TrybeTrip?
+        <br>
+        <textarea maxlength="500" name="textarea" id="textarea" cols="30" rows="10" style="resize: none;"></textarea>
+      </label>
+      <br>
+      <label for="data">Qual a melhor data para realizar sua viagem?
+        <br>
+        <input type="data" id="data" placeholder="dd/mm/aaaa" style="text-align: center;">
+      </label>
+      <br>
+      <div>
+        <input type="checkbox" id="chack1">
+        <label for="chack1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+        </label>
+        <br>
+        <input type="checkbox" id="check2">
+        <label for="check2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos
+          futuros.
+        </label>
+      </div>
+    </form>
+    <button type="submit">Envia</button>
+    <button type="reset">Apagar</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
