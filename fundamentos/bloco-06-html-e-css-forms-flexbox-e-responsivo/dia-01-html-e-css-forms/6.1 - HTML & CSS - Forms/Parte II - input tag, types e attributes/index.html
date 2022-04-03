@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INPUT, TAG, TYPES E ATTRIBUTES</title>
+</head>
+
+<body>
+  <!-- Aprendendo sobre formulário, inputs e textarea -->
+  <h1>Formulário parte I</h1>
+  <br>
+  <form action="" method="get">
+    <label for="input-text">Digite seu nome:</label>
+    <input type="text" placeholder="Digite alguma coisa" required class="" value="Carlos" name="texto" id="input-text">
+    <br>
+    <textarea name="" id="" cols="30" rows="10">Texto já estabelecido</textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <br>
+  <hr>
+  <br>
+  <!-- aprendendo sobre checkbox, radio e englobação de label no radio -->
+  <h1>Formulário parte II</h1>
+  <form action="" method="get">
+    <input type="checkbox" id="esporte-1" value="fut" name="esporte" checked>Futebol
+    <input type="checkbox" id="esporte-2" value="vol" name="esporte">Vôlei
+    <input type="checkbox" id="esporte-3" value="pet" name="esporte">Peteca
+    <input type="checkbox" id="esporte-4" value="bas" name="esporte">Basquete
+    <br>
+    <br>
+    <label for="hub1">
+      <input type="radio" id="hub1" name="hub" value="sp">São Paulo
+    </label>
+    <label for="hub2">
+      <input type="radio" id="hub2" name="hub" value="bh">Belo Horizonte
+    </label>
+    <label for="hub3">
+      <input type="radio" id="hub3" name="hub" value="fl">Florianópolis
+    </label>
+    <label for="hub4">
+      <input type="radio" id="hub4" name="hub" value="mc">Macedônia
+    </label>
+  </form>
+  <br>
+  <hr>
+  <br>
+  <!-- aprendendo a criar uma sessão com variadas opcções -->
+  <h1>Formulário Parte III</h1>
+  <form action="" method="get">
+    <select name="estado" id="dropdown-estado">
+      <option value="sp">São Paulo</option>
+      <option value="ba">Bahia</option>
+      <option value="mg">Minas Gerais</option>
+      <option value="am">Amazonas</option>
+    </select>
+  </form>
+  <br>
+  <hr>
+  <br>
+  <!-- quando se tiver utilizando o metodo post dentro da tag form é preciso utilizar uma propriedade chamada enctype="multipart/form-data" para dizer que a submissao dos dados nao é somente de textos e sim tbm de arquivos-->
+  <h1>Formulário Parte IV</h1>
+  <form action="" method="get" enctype="multipart/form-data">
+    <input type="password" name="senha" id="" placeholder="input do tipo senha">
+    <input type="file" name="" id="">
+  </form>
+  <br>
+  <hr>
+  <br>
+  <!--  -->
+  <h1>Formulário</h1>
+  <form action="" method="get" enctype="multipart/form-data">
+    <p>Usuário</p>
+    <input type="text" name="user" required>
+    <p>Senha</p>
+    <input type="password" name="senha" required>
+    <br>
+    <button type="submit" class="" name="" id="">Enviar</button>
+  </form>
+  <br>
+  <hr>
+  <br>
+  <!-- Vamos praticar um pouco, criando uma tela de login? 🔥 -->
+  <h1 style="text-align: center; background-color: greenyellow; margin: 0; padding: 25px; ">Para Fixar</h1>
+  <!-- 1 - Adicione os campos de entrada para email e senha. -->
+  <form action="" style="background-color: yellow; text-align: center;">
+    <p>Email</p>
+    <input type="email" name="email" id="email" placeholder="digite seu email" required autocomplete="off" autofocus>
+    <p>Senha</p>
+    <input type="password" name="senha" id="senha" placeholder="digite sua senha" required>
+    <br>
+    <!-- 2 - Adicione um checkbox com o texto Lembre-me . -->
+    <input type="checkbox">Lembre-me
+    <br>
+    <!-- 3 - Adicione um botão com o texto Entrar . -->
+    <button>Entrar</button>
+  </form>
+  <!-- 4 - Adicione os placeholder Digite seu email e Digite sua senha para os campos de email e senha. -->
+  <!-- 5 - Adicione o atributo required para os campos de email e senha. -->
+  <!-- 6 - Adicione o atributo autocomplete="off" para o campo de email. -->
+  <!-- 7 - Adicione o atributo autofocus para o campo de email. -->
+</body>
+
+</html>
