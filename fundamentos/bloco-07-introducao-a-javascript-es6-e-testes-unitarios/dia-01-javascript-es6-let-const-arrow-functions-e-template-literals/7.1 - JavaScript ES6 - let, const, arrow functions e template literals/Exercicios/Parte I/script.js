@@ -7,14 +7,14 @@
 
 function testingScope(escopo) {
   if (escopo === true) {
-    var ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
-    ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
+    var ifScope = "Não devo ser utilizada fora do meu escopo (if)";
+    ifScope = ifScope + " ótimo, fui utilizada no escopo !";
     console.log(ifScope);
   } else {
-    var elseScope = 'Não devo ser utilizada fora meu escopo (else)';
+    var elseScope = "Não devo ser utilizada fora meu escopo (else)";
     console.log(elseScope);
   }
-  console.log(ifScope + ' o que estou fazendo aqui ? :O'); // Se necessário esta linha pode ser removida.
+  console.log(ifScope + " o que estou fazendo aqui ? :O"); // Se necessário esta linha pode ser removida.
 }
 
 testingScope(true);
@@ -34,16 +34,16 @@ console.log(oddsAndEvens); // será necessário alterar essa linha 😉
 // Parte I
 // Exercício 1
 
-const testingScope = escopo => { 
-  if (escopo === true) { 
-    let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+const testingScope = (escopo) => {
+  if (escopo === true) {
+    let ifScope = "Não devo ser utilizada fora do meu escopo (if)";
     ifScope = `${ifScope} ótimo, fui utilizada no escopo !`;
     console.log(ifScope);
   } else {
-    const elseScope = 'Não devo ser utilizada fora meu escopo (else)';
+    const elseScope = "Não devo ser utilizada fora meu escopo (else)";
     console.log(elseScope);
   }
-}
+};
 
 testingScope(true);
 
@@ -60,10 +60,12 @@ const sortOddsAndEvens = () => {
   oddsAndEvens[5] = 13;
 
   return oddsAndEvens;
-}
+};
 
 const sortedArray = sortOddsAndEvens();
-console.log(`Os números ${sortedArray} se encontram ordenados de forma crescente !`);
+console.log(
+  `Os números ${sortedArray} se encontram ordenados de forma crescente !`
+);
 
 // Caso você não tenha conseguido fazer esse exercício, reforce seus estudos sobre const, arrow functions e arrays.
 
@@ -71,17 +73,22 @@ console.log(`Os números ${sortedArray} se encontram ordenados de forma crescent
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-const sortArrayBonus = array => {
+const sortArrayBonus = (array) => {
   const sortOddsAndEvens = array.sort((a, b) => a - b);
   return sortOddsAndEvens;
-}
+};
 
 const sortedArrayBonus = sortArrayBonus(oddsAndEvens);
-console.log(`Os números ${sortedArrayBonus} se encontram ordenados de forma crescente !`);
+console.log(
+  `Os números ${sortedArrayBonus} se encontram ordenados de forma crescente !`
+);
 
 // array.sort com sort em uma linha.
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-console.log(`Os números ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente !`);
-
+console.log(
+  `Os números ${oddsAndEvens.sort(
+    (a, b) => a - b
+  )} se encontram ordenados de forma crescente !`
+);

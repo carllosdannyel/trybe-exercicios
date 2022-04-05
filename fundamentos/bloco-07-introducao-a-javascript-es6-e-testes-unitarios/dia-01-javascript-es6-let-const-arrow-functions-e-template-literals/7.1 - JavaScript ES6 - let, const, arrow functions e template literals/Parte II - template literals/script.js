@@ -20,3 +20,4 @@ Terceira linha;`);
 console.log("Primeira linha;\n" + "Segunda linha;\n" + "Terceira linha;\n");
 
 // Agora você já está pronto para escrever códigos mais limpos e legíveis usando template literals !
+
