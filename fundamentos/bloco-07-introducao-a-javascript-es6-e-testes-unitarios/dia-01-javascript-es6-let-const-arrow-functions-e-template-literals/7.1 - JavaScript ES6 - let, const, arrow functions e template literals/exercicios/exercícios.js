@@ -58,13 +58,58 @@ Utilize template literals para que a chamada console.log(<seu código>oddsAndEve
 Bônus (opcional): tente fazer o mesmo exercício utilizando o método array.sort() . Spoiler: É possível realizar uma função que ordene qualquer array de números.
 */
 
-const oddsAndEvens = [13, 3, 4, 10, 7, 2];
-oddsAndEvens.sort((a, b) => a - b);
-console.log(
-  `Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`
-);
+// const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+// oddsAndEvens.sort((a, b) => a - b);
+// console.log(
+//   `Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`
+// );
 
-oddsAndEvens.sort((a, b) => b - a);
-console.log(
-  `Os números ${oddsAndEvens} se encontram ordenados de forma decrescente!`
-);
+// oddsAndEvens.sort((a, b) => b - a);
+// console.log(
+//   `Os números ${oddsAndEvens} se encontram ordenados de forma decrescente!`
+// );
+
+// revisao do gabarito
+
+// const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+// // 
+// // const sortArrayBonus = array => {
+//   // const sortOddsAndEvens = array.sort((a, b) => a - b);
+//   // return sortOddsAndEvens;
+// // }
+// // 
+// // const sortedArrayBonus = sortArrayBonus(oddsAndEvens);
+// // console.log(`Os números ${sortedArrayBonus} se encontram ordenados de forma crescente !`);
+
+// const ordenarArray = array => {
+//   const arrayOrdenado = array.sort((a, b) => a - b);
+//   return arrayOrdenado;
+// }
+
+// const arrayOrdenado = ordenarArray(oddsAndEvens);
+// console.log(`Os números ${arrayOrdenado} se encontram ordenados de forma crescente !`);
+
+// separando pares e impares
+
+// const array = [1, 4, 10, 13, 57, 98, 76, 45, 65]
+
+// const separador = (numero) => {
+//   const pares = []
+//   const impares = []
+
+//   numero.forEach((element) => {
+//     element % 2 === 0 ? pares.push(element) : impares.push(element)
+//   })
+
+//   const resultado = [`esses são os números pares: ${pares}`, `esses são os números impares: ${impares}`]
+//   return resultado
+// }
+
+// console.log(separador(array));
+
+// const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+// console.log(`Os números ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente !`);
+
+// console.log(`Os números ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente !`);
+
