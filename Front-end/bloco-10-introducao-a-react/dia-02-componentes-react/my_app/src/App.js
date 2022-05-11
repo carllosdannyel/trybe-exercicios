@@ -1,8 +1,9 @@
 import './App.css';
-// import Greeting from './Components/Greeting';
-// import Image from './Components/Image';
+import Greeting from './Components/Greeting';
+import Image from './Components/Image';
 // src/App.js
 import React from 'react';
+import Title from './Components/Title';
 
 class App extends React.Component {
   render() {
@@ -39,6 +40,10 @@ class App extends React.Component {
     // Retorno do que será renderizado
     return (
       <article className='App'>
+        <Title />
+        <Greeting name="Front-Enders"/>
+        <Image source="https://miro.medium.com/max/1400/1*vT4fCkknydeG480A-zZmTA.png" alternativeText="" />
+        <hr />
         <section>
           <img src={ album01.image } alt={ album01.title } />
           <h2>{ album01.title }</h2>
