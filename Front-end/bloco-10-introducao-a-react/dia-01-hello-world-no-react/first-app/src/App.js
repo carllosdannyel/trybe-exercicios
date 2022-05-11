@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./Header";
 import Content from "./Content";
+import Footer from "./Footer";
 
 export default class App extends Component {
   render() {
-
     const Task = (value) => {
       return <li key={value}>{value}</li>;
     };
@@ -18,12 +18,17 @@ export default class App extends Component {
     ];
 
     return (
-      <div className="App">
+      <div className='App'>
         <Header />
-        <ul className="unorderedList">{tarefas.map((tarefa) => Task(tarefa))}</ul>
+        <hr />
+        <ul className='unorderedList'>
+          {tarefas.map((tarefa) => Task(tarefa))}
+        </ul>
         <hr />
         <Content />
+        <hr />
+        <Footer />
       </div>
-    )
+    );
   }
 }
