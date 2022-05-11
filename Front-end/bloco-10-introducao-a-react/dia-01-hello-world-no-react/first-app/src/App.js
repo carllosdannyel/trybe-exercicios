@@ -15,6 +15,6 @@ export default class App extends Component {
       "Ir trabalhar",
     ];
 
-    return <ul>{tarefas.map((tarefa) => Task(tarefa))}</ul>;
+    return <ul className="App">{tarefas.map((tarefa) => Task(tarefa))}</ul>;
   }
 }
