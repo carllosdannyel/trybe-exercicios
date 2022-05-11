@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Header from "./Header";
+import Content from "./Content";
 
 export default class App extends Component {
   render() {
@@ -20,6 +21,8 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <ul className="unorderedList">{tarefas.map((tarefa) => Task(tarefa))}</ul>
+        <hr />
+        <Content />
       </div>
     )
   }
