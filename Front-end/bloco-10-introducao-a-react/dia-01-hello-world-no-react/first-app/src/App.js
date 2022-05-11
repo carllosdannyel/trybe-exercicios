@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Header from "./Header";
 
 export default class App extends Component {
   render() {
@@ -15,6 +16,11 @@ export default class App extends Component {
       "Ir trabalhar",
     ];
 
-    return <ul className="App">{tarefas.map((tarefa) => Task(tarefa))}</ul>;
+    return (
+      <div className="App">
+        <Header />
+        <ul className="unorderedList">{tarefas.map((tarefa) => Task(tarefa))}</ul>
+      </div>
+    )
   }
 }

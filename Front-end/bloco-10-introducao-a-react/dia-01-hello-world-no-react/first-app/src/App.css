@@ -1,5 +1,8 @@
 .App {
   text-align: center;
-  list-style: none;
   font-size: 24px;
+}
+
+.unorderedList {
+  list-style: none;
 }
