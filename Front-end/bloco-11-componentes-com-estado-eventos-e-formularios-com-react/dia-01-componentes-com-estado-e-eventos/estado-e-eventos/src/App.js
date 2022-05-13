@@ -21,7 +21,8 @@ export default class App extends Component {
     }));
   }
 
-  botao1() {
+  botao1(param) {
+    console.log(param);
     console.log(this);
     console.log("clicou no botão 1");
   }
@@ -39,7 +40,7 @@ export default class App extends Component {
   render() {
     return (
       <div className='App'>
-        <button onClick={this.botao1}>botão 1</button>
+        <button onClick={() => this.botao1('ola, sou um parametro, e fui clicado')}>botão 1</button>
         <button onClick={this.botao2}>botão 2</button>
         <button onClick={this.botao3}>botão 3</button>
         <button
