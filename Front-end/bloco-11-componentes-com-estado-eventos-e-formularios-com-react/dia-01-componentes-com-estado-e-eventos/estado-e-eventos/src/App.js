@@ -6,7 +6,10 @@ export default class App extends Component {
     super();
 
     this.state = {
-      numeroDeCliques: 0,
+      botao0: 0,
+      botao1: 0,
+      botao2: 0,
+      botao3: 0,
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -17,35 +20,37 @@ export default class App extends Component {
 
   handleClick() {
     this.setState((estadoAnterior, _props) => ({
-      numeroDeCliques: estadoAnterior.numeroDeCliques + 1,
+      botao0: estadoAnterior.botao0 + 1,
     }));
   }
 
-  botao1(param) {
-    console.log(param);
-    console.log(this);
-    console.log("clicou no botão 1");
+  botao1() {
+    this.setState((estadoAnterior, _props) => ({
+      botao1: estadoAnterior.botao1 + 1,
+    }));
   }
 
   botao2() {
-    console.log(this);
-    console.log("clicou no botão 2");
+    this.setState((estadoAnterior, _props) => ({
+      botao2: estadoAnterior.botao2 + 1,
+    }));
   }
 
   botao3() {
-    console.log(this);
-    console.log("clicou no botão 3");
+    this.setState((estadoAnterior, _props) => ({
+      botao3: estadoAnterior.botao3 + 1,
+    }));
   }
 
   render() {
     return (
       <div className='App'>
-        <button onClick={() => this.botao1('ola, sou um parametro, e fui clicado')}>botão 1</button>
-        <button onClick={this.botao2}>botão 2</button>
-        <button onClick={this.botao3}>botão 3</button>
+        <button onClick={this.botao1}>{`botão ${this.state.botao1}`}</button>
+        <button onClick={this.botao2}>{`botão ${this.state.botao2}`}</button>
+        <button onClick={this.botao3}>{`botão ${this.state.botao3}`}</button>
         <button
           onClick={this.handleClick}
-        >{`Botão com evento de click ${this.state.numeroDeCliques}`}</button>
+        >{`Botão ${this.state.botao0}`}</button>
       </div>
     );
   }
