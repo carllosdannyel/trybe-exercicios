@@ -23,28 +23,28 @@ export default class App extends Component {
 
   // faz a ligação do estado anterior de uma propriedade do estado criando uma lógica de incrementação
   handleClick() {
-    this.setState((estadoAnterior, _props) => ({
+    this.setState((estadoAnterior) => ({
       botao0: estadoAnterior.botao0 + 1,
     }));
   }
 
   // faz a ligação do estado anterior de uma propriedade do estado criando uma lógica de incrementação
   botao1() {
-    this.setState((estadoAnterior, _props) => ({
+    this.setState((estadoAnterior) => ({
       botao1: estadoAnterior.botao1 + 1,
     }));
   }
 
   // faz a ligação do estado anterior de uma propriedade do estado criando uma lógica de incrementação
   botao2() {
-    this.setState((estadoAnterior, _props) => ({
+    this.setState((estadoAnterior) => ({
       botao2: estadoAnterior.botao2 + 1,
     }));
   }
 
   // faz a ligação do estado anterior de uma propriedade do estado criando uma lógica de incrementação
   botao3() {
-    this.setState((estadoAnterior, _props) => ({
+    this.setState((estadoAnterior) => ({
       botao3: estadoAnterior.botao3 + 1,
     }));
   }
