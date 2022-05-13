@@ -10,5 +10,5 @@ export default class Greeting extends Component {
 }
 
 Greeting.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 }

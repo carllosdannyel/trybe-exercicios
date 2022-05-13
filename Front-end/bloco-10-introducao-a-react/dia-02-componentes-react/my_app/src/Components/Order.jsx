@@ -15,10 +15,10 @@ export default class Order extends Component {
 }
 
 Order.propTypes = {
-  user: PropTypes.string,
-  product: PropTypes.string,
+  user: PropTypes.string.isRequired,
+  product: PropTypes.string.isRequired,
   price: PropTypes.shape({
-    value: PropTypes.number,
-    currency: PropTypes.string,
+    value: PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
   })
 }

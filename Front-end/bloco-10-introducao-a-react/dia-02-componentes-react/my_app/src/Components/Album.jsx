@@ -21,15 +21,15 @@ export default class Album extends Component {
 }
 
 Album.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   releaseDate: PropTypes.shape({
-    year: PropTypes.number,
-    month: PropTypes.number,
-    day: PropTypes.number,
+    year: PropTypes.number.isRequired,
+    month: PropTypes.number.isRequired,
+    day: PropTypes.number.isRequired,
   }),
   others: PropTypes.shape({
-    recordCompany: PropTypes.string,
-    formats: PropTypes.string,
-  })
+    recordCompany: PropTypes.string.isRequired,
+    formats: PropTypes.string.isRequired,
+  }),
 }

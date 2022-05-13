@@ -10,6 +10,6 @@ export default class Image extends Component {
 }
 
 Image.propTypes = {
-  source: PropTypes.string,
-  alternativeText: PropTypes.string,
+  source: PropTypes.string.isRequired,
+  alternativeText: PropTypes.string.isRequired,
 }
