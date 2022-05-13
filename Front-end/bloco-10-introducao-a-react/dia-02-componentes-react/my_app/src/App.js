@@ -5,6 +5,7 @@ import React from 'react';
 import Title from './Components/Title';
 import Album from './Components/Album';
 import UserProfile from './Components/UserProfile';
+import Order from './Components/Order';
 // src/App.js
 
 class App extends React.Component {
@@ -53,18 +54,50 @@ class App extends React.Component {
       avatar: "https://cdn.pixabay.com/photo/2017/01/31/13/05/cameo-2023867_640.png"
     };
 
+    const headphone = {
+      id: 102,
+      user: "cena@gmail.com",
+      product: "Razer Headphone",
+      price: {
+        value: 99.99,
+        currency: "dollars"
+      }
+    };
+
+    const energyDrink = {
+      id: 77,
+      user: "cena@gmail.com",
+      product: "Monster 500mL",
+      price: {
+        value: 9.99,
+        currency: "dollars"
+      }
+    };
+
     // Retorno do que será renderizado
     return (
       <div className='App'>
-        <Greeting name="Front-Enders"/>
-        <Title />
-        <Image source="https://miro.medium.com/max/1400/1*vT4fCkknydeG480A-zZmTA.png" alternativeText="" />
-        <hr />
-        <Album album={album01} />
-        <Album album={album02} />
-        <hr />
-        <UserProfile user={joao}/>
-        <UserProfile user={amelia}/>
+        <div>
+          <Greeting name="Front-Enders"/>
+          <Title />
+          <Image className='image' source="https://miro.medium.com/max/1400/1*vT4fCkknydeG480A-zZmTA.png" alternativeText="" />
+          <hr />
+        </div>
+        <div>
+          <Album album={album01} />
+          <Album album={album02} />
+          <hr />
+        </div>
+        <div>
+          <UserProfile user={joao}/>
+          <UserProfile user={amelia}/>
+          <hr />
+        </div>
+        <div>
+        <h1> Orders recently created </h1>
+        <Order order={headphone} />
+        <Order order={energyDrink} />
+        </div>
       </div>
     );
   }

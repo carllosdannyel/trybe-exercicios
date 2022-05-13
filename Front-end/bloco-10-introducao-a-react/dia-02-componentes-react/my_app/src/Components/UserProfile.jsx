@@ -4,6 +4,7 @@ import Image from './Image';
 
 class UserProfile extends React.Component {
   render() {
+    
     return (
       <div>
         <p> {this.props.user.name} </p>
