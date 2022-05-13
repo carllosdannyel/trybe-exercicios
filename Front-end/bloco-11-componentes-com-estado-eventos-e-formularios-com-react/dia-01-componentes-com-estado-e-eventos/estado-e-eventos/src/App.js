@@ -51,15 +51,16 @@ export default class App extends Component {
 
   // renderiza toda a lógica dentro dela na tela
   render() {
+
+    // destructuring das propriedades do state
+    const { botao0, botao1, botao2, botao3 } = this.state;
     return (
-        // Funções que tratam eventos devem ser vinculadas aos seus respectivos elementos com {this.minhaFuncao} ou {() => this.minhaFuncao('Meu parametro').
+      // Funções que tratam eventos devem ser vinculadas aos seus respectivos elementos com {this.minhaFuncao} ou {() => this.minhaFuncao('Meu parametro').
       <div className='App'>
-        <button onClick={this.botao1}>{`botão ${this.state.botao1}`}</button>
-        <button onClick={this.botao2}>{`botão ${this.state.botao2}`}</button>
-        <button onClick={this.botao3}>{`botão ${this.state.botao3}`}</button>
-        <button
-          onClick={this.handleClick}
-        >{`Botão ${this.state.botao0}`}</button>
+        <button onClick={this.botao1}>{`botão ${botao1}`}</button>
+        <button onClick={this.botao2}>{`botão ${botao2}`}</button>
+        <button onClick={this.botao3}>{`botão ${botao3}`}</button>
+        <button onClick={this.handleClick}>{`Botão ${botao0}`}</button>
       </div>
     );
   }
