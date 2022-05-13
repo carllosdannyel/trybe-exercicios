@@ -52,6 +52,7 @@ export default class App extends Component {
   // renderiza toda a lógica dentro dela na tela
   render() {
     return (
+        // Funções que tratam eventos devem ser vinculadas aos seus respectivos elementos com {this.minhaFuncao} ou {() => this.minhaFuncao('Meu parametro').
       <div className='App'>
         <button onClick={this.botao1}>{`botão ${this.state.botao1}`}</button>
         <button onClick={this.botao2}>{`botão ${this.state.botao2}`}</button>
