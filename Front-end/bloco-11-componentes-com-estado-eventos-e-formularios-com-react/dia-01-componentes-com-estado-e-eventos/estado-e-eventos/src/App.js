@@ -1,42 +1,50 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./App.css";
-
-function botao1() {
-  console.log('clicou no botão 1')
-}
-
-function botao2() {
-  console.log('clicou no botão 2')
-}
-
-function botao3() {
-  console.log('clicou no botão 3')
-}
 
 export default class App extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       numeroDeCliques: 0,
-    }
+    };
 
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
+    this.botao1 = this.botao1.bind(this);
+    this.botao2 = this.botao2.bind(this);
+    this.botao3 = this.botao3.bind(this);
   }
 
   handleClick() {
     this.setState((estadoAnterior, _props) => ({
-      numeroDeCliques: estadoAnterior.numeroDeCliques + 1
-    }))
+      numeroDeCliques: estadoAnterior.numeroDeCliques + 1,
+    }));
+  }
+
+  botao1() {
+    console.log(this);
+    console.log("clicou no botão 1");
+  }
+
+  botao2() {
+    console.log(this);
+    console.log("clicou no botão 2");
+  }
+
+  botao3() {
+    console.log(this);
+    console.log("clicou no botão 3");
   }
 
   render() {
     return (
-      <div className="App">
-        <button onClick={botao1}>botão 1</button>
-        <button onClick={botao2}>botão 2</button>
-        <button onClick={botao3}>botão 3</button>
-        <button onClick={this.handleClick}>{`Botão com evento de click ${this.state.numeroDeCliques}`}</button>
+      <div className='App'>
+        <button onClick={this.botao1}>botão 1</button>
+        <button onClick={this.botao2}>botão 2</button>
+        <button onClick={this.botao3}>botão 3</button>
+        <button
+          onClick={this.handleClick}
+        >{`Botão com evento de click ${this.state.numeroDeCliques}`}</button>
       </div>
     );
   }
